@@ -21,9 +21,9 @@ import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightne
 
 const Container = styled.div`
   flex: 1.5;
-  background-color: #202020;
+  background-color: ${({theme}) =>  theme.bg};
   height: 140vh;
-  color: white;
+  color: ${({theme}) =>  theme.text};
   position: sticky;
   top: 0;   
 `;
@@ -53,7 +53,7 @@ const Item = styled.div`
 `
 const Hr = styled.div`
   margin: 15px 0px;
-  border: 0.5px solid #373737;  
+  border: 0.5px solid${({theme}) =>  theme.soft};  
 `
 const Login = styled.div`
 `
@@ -70,8 +70,15 @@ const Button = styled.button`
   align-items: center;
   gap: 5px;
 `
+const Title = styled.h2`
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaaaaa;
+    margin-botton: 20px;
+`
 
-export default function Menu() {
+
+export default function Menu({darkMode, setDarkMode}) {
   return (
     <Container>
       <Wrapper>
@@ -109,6 +116,7 @@ export default function Menu() {
             <Button>SIGN IN</Button>
         </Login>
         <Hr/>
+        <Title>Best of thg PROJECTS</Title>
         <Item>
             <LibraryMusicOutlinedIcon/> 
            Music
@@ -149,7 +157,7 @@ export default function Menu() {
            Help
         </Item>
     
-        <Item>
+        <Item onClick={() => setDarkMode(!darkMode)}>
             <SettingsBrightnessOutlinedIcon /> 
          Light Mode
         </Item>
