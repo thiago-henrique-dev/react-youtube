@@ -7,16 +7,16 @@ import { darkTheme, lightTheme } from "./utils/Theme";
 
 const Container = styled.div`
   display: flex;
-`
+`;
+
 const Main = styled.div`
   flex: 7;
-  background-color: ${({ theme }) => theme.bg}
-` 
-
+  background-color: ${({ theme }) => theme.bg};
+`;
 const Wrapper = styled.div`
-    padding: 22px 96px;
+  padding: 22px 96px;
+`;
 
-`
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
@@ -27,7 +27,7 @@ function App() {
           <Main>
             <Navbar/>
               <Wrapper>
-
+            
               </Wrapper>
           </Main>
     </Container>
