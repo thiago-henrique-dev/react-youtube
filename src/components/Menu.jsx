@@ -83,12 +83,13 @@ export default function Menu({darkMode, setDarkMode}) {
   return (
     <Container>
       <Wrapper>
-        <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
-        <Logo>
-            <Img src={thgTube}/>
-            YouTube 
-        </Logo>
+      <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <Logo>
+            <Img src={thgTube} />
+           YouTube
+          </Logo>
         </Link>
+      
         <Item>
             <HomeIcon/> 
             Home
@@ -162,9 +163,10 @@ export default function Menu({darkMode, setDarkMode}) {
     
         <Item onClick={() => setDarkMode(!darkMode)}>
             <SettingsBrightnessOutlinedIcon /> 
-         Light Mode
+         {darkMode ? "Light" : "Dark"} Mode
         </Item>
 
+ 
       </Wrapper>
     </Container>
   );

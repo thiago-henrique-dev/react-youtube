@@ -21,6 +21,7 @@ const Wrapper = styled.div`
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Container>
@@ -32,6 +33,7 @@ function App() {
               <Routes>
                 <Route path="/">
                   <Route index element={<Home />} />
+                  
                   <Route path="video">
                     <Route path=":id" element={<Video />} />
                   </Route>
