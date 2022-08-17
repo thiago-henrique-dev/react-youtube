@@ -17,6 +17,7 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
+import { Link } from 'react-router-dom'
 
 
 const Container = styled.div`
@@ -58,7 +59,7 @@ const Hr = styled.div`
 const Login = styled.div`
 `
 const Button = styled.button`
-      padding: 5px 15px;
+  padding: 5px 15px;
   background-color: transparent;
   border: 1px solid #3ea6ff;
   color: #3ea6ff;
@@ -82,10 +83,12 @@ export default function Menu({darkMode, setDarkMode}) {
   return (
     <Container>
       <Wrapper>
+        <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
         <Logo>
             <Img src={thgTube}/>
             YouTube 
         </Logo>
+        </Link>
         <Item>
             <HomeIcon/> 
             Home
