@@ -5,6 +5,7 @@ import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutl
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
 import thg from "../../img/thg.png";
+import Comments from "./Comments";
 const Container = styled.div`
   display: flex;
   gap: 24px;
@@ -101,7 +102,7 @@ export default function Video() {
     <Container>
       <VideoWrapper>
         <iframe
-          width="130%"
+          width="100%"
           height="400"
           src="https://www.youtube.com/embed/watch?v=CUQfurXFrgc&list=RDCUQfurXFrgc&start_radio=1"
           title="Toutube video player"
@@ -128,6 +129,7 @@ export default function Video() {
           </Buttons>
         </Details>
         <Hr />
+        <Channel>
         <ChannelInfo>
           <Image src={thg} />
           <ChannelDetail>
@@ -141,6 +143,9 @@ export default function Video() {
           </ChannelDetail>
         </ChannelInfo>
         <Subscribe>SUBSCRIBE</Subscribe>
+        </Channel>
+        <Hr/>
+        <Comments></Comments>
       </VideoWrapper>
       <Content>Content</Content>
       <Recommentation>Recommentation</Recommentation>
