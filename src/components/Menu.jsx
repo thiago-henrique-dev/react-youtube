@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom'
 
 
 const Container = styled.div`
-  flex: 1.5;
+  flex: 1.0;
   background-color: ${({theme}) =>  theme.bgLighter};
   height: 140vh;
   color: ${({theme}) =>  theme.text};
@@ -51,6 +51,10 @@ const Item = styled.div`
     gap: 25px;
     padding: 7.5px 0px;
     cursor: pointer;
+
+    &:hover{
+      background-color: ${({ theme}) =>  theme.soft}
+    }
 `
 const Hr = styled.div`
   margin: 15px 0px;
@@ -117,7 +121,12 @@ export default function Menu({darkMode, setDarkMode}) {
         <Hr/>
         <Login>
             Sign in to like videos, comment, and subscribe.
-            <Button>SIGN IN</Button>
+            <Link to="signin" style={{ textDecoration: "none"}}>
+            <Button>
+              <AccountCircleOutlinedIcon/>
+                 SIGN IN
+              </Button>
+            </Link>
         </Login>
         <Hr/>
         <Title>Best of thg PROJECTS</Title>

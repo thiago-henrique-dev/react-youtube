@@ -6,6 +6,7 @@ import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
 import thg from "../../img/thg.png";
 import Comments from "./Comments";
+import Card from '../Card'
 const Container = styled.div`
   display: flex;
   gap: 24px;
@@ -147,8 +148,18 @@ export default function Video() {
         <Hr/>
         <Comments></Comments>
       </VideoWrapper>
-      <Content>Content</Content>
-      <Recommentation>Recommentation</Recommentation>
+      
+      <Recommentation>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+
+      </Recommentation>
     </Container>
   );
 }

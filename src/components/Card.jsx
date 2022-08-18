@@ -51,10 +51,10 @@ const Info = styled.div`
   
 
 `
-export default function Card() {
+export default function Card({ type}) {
   return (
     <Link to="/video/test" style={{ textDecoration: "none" }}>
-    <Container>
+    <Container type={type}>
         <Image src="https://th.bing.com/th/id/R.daceaff2114c7090e45aa73e527dccf1?rik=9S6NNkwHsWhRdg&pid=ImgRaw&r=0"/>
         <Details>
             <ChannelImage src={thg}/>
